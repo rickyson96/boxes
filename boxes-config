@@ -2953,4 +2953,40 @@ END vim-box
 
 # ============================================================================
 
+
+BOX scaladoc
+
+author   "Ted Berg <tedberg@spiritone.com>"
+designer "(public domain)"
+revision "1.0"
+revdate  "October 25, 1999 (Monday 10:16h)"
+created  "October 25, 1999 (Monday 10:16h)"
+tags "programming, comment"
+
+sample
+    /** Scaladoc Comments
+      *
+      * descriptions here
+      */
+ends
+
+shapes {
+     w ("/**") n(" ")
+   wsw ("  *")
+    sw ("  *") ssw ("/") s(" ")
+}
+
+padding { left 1 }
+
+delimiter ?"
+replace "\*/" with "*\/"                 # quote closing comment tags
+reverse "\*\\/" to "*/"
+
+elastic (wsw, n, s)
+
+END scaladoc
+
+
+# ============================================================================
+
 #EOF                                                  vim: set ai sw=4:
